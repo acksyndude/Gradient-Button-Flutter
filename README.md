@@ -6,6 +6,8 @@ You can use it :
 
 ```
 GradientBackgroundButton(
+              materialStatePropertyShape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0))),
               icon: const Icon(Icons.login_rounded,
                   color: Colors.white, size: 20),
               leftIcon: 20,
