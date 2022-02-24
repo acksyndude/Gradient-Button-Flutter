@@ -8,12 +8,14 @@ class GradientBackgroundButton extends StatelessWidget {
   final Icon icon;
   final double leftIcon, rightIcon;
   final VoidCallback onPressed;
+  final MaterialStateProperty<OutlinedBorder> materialStatePropertyShape;
 
   const GradientBackgroundButton({
     Key? key,
     required this.child,
     required this.gradient,
     required this.icon,
+    required this.materialStatePropertyShape,
     this.leftIcon = 20,
     this.rightIcon = 1,
     this.width = double.infinity,
@@ -36,9 +38,6 @@ class GradientBackgroundButton extends StatelessWidget {
             ),
           ],
           borderRadius: const BorderRadius.all(Radius.circular(18.0))),
-      // child: Material(
-      //   borderRadius: const BorderRadius.all(Radius.circular(18.0)),
-      //   color: Colors.transparent,
       child:
           ElevatedButton(
               onPressed: onPressed,
@@ -46,8 +45,8 @@ class GradientBackgroundButton extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.transparent),
                   shadowColor: MaterialStateProperty.all(Colors.transparent),
                   elevation: MaterialStateProperty.all(0.0),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0)))),
+                  shape: materialStatePropertyShape,
+              ),
               child: Center(
                 child: 
                 Row(
