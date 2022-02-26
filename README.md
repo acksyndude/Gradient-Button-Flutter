@@ -24,3 +24,9 @@ GradientBackgroundButton(
               onPressed: () => print('Clicked')
               ),
 ```
+
+
+## Credit
+
+Modified Code From : https://stackoverflow.com/a/52244149
+If you use `Elevated` Button in place of `InkWell` then there's an issue with Background of `Elevated` Button and `InkWell` is not as good as `Elevated` and `TextButton`
