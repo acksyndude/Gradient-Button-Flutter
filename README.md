@@ -15,7 +15,7 @@ GradientBackgroundButton(
     ),
     onPressed: () => print('Clicked')),
 ```
-![Image](https://github.com/coderscoding/Gradient-Button-Flutter/blob/main/screen_.png?raw=true)
+![Image](screen_.png)
 
 ```
 GradientBackgroundButton(
